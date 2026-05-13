@@ -22,10 +22,12 @@ gsap.to(triangle, {
     delay: 0.5
 })
 
+
+
 gsap.to(".hexagon", {
-    x: 100,
-    y: 30,
-    duration: 1,
+    xPercent: 50,
+    yPercent: 100,
+    duration: 5,
     ease: "bounce.out",
     delay: 0.5
 })
