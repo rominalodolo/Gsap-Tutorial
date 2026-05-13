@@ -3,3 +3,16 @@
  height: 50px;
  width: 50px   
 }
+
+h1 {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: cadetblue;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: #F6FBFB;
+}
