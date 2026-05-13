@@ -15,7 +15,7 @@ body {
     display: relative;
     justify-content: space-around;
     align-items: center;
-    height: 50vh;
+    height: 30vh;
 }
 
 .box {
@@ -28,6 +28,20 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #7AAFB2;
-    
+    background-color: #7AAFB2;   
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #5F9EA0;    
+}
+
+.hexagon {
+    width: 150px;
+    aspect-ratio: 1 / 1.1547; /* Standard hexagon ratio: 2/sqrt(3) */
+    background: #7AAFB2;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
