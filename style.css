@@ -1,3 +1,18 @@
+:root{
+    --cadet-dark:#5F9EA0;
+    --cadet:#7AAFB2;
+    --cadet-light:#A7CBCD;
+    --fog:#D6E8E9;
+    --white:#F6FBFB;
+
+    --text-dark:#244446;
+
+    --blush:#F2C7D2;
+    --blush-soft:#F8DCE3;
+
+    --shadow:rgba(70,110,115,0.12);
+}
+
 h1 {
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
@@ -6,35 +21,63 @@ h1 {
     color: #f9ffff;
 }
 
-body {
-    font-family: "Be Vietnam Pro", sans-serif;
-    background-color: #5e9097;
-    display: grid;
-    grid-column: auto;
+body{
+    font-family:"Be Vietnam Pro", sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--cadet-dark),
+            var(--cadet)
+        );
+
+    min-height:100vh;
+
+    padding:40px;
+
+    display:grid;
+    gap:24px;
 }
 
-.container1 {
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
-    background-color: #7cafb6;
-    color: #f9ffff;
-    border-radius: 25px;
-    padding: 10px;
+.container1,
+.container2{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    padding:30px;
+
+    border-radius:32px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 10px 30px var(--shadow);
+
+    position:relative;
+
+    overflow:hidden;
 }
 
-.container2 {
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
-    background-color: #d2eeec;
-    color: #002725;
-    border-radius: 25px;
-    padding: 10px;
+.container1::before,
+.container2::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,0.18),
+            transparent 35%
+        );
+
+    pointer-events:none;
 }
 
 .box {
- background-color: #5F9EA0;
+ background-color: #F6FBFB;
  height: 50px;
  width: 50px   
 }
@@ -43,7 +86,7 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #7AAFB2;   
+    background-color: #F6FBFB;   
 }
 
 .triangle {
@@ -51,12 +94,12 @@ body {
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 100px solid #5F9EA0;    
+    border-bottom: 100px solid #F6FBFB;    
 }
 
 .hexagon {
     width: 150px;
-    background: #7AAFB2;
+    background: #F6FBFB;
     aspect-ratio: 1/cos(30deg);
     clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
 }
